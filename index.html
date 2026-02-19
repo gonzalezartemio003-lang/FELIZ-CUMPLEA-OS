@@ -126,3 +126,93 @@ animation:twinkle 5s infinite;
 <h1>Felices 26 Años Daniela mi hoyuelito 💛</h1>
 <p>
 Hoy celebramos no solo tu cumpleaños, sino la increíble persona y mujer que eres.  
+Admiro tu fuerza, tu manera de ver la vida.  
+Eres alguien trabajadora, increíblemente hábil e inteligente que sabe cómo resolver las cosas de forma independiente.  
+Tan hermosa no solo físicamente sino espiritualmente, así que no dudes de lo capaz que eres.  
+Podrás y puedes lograr lo que desees, y aunque sea difícil, sé que lo conseguirás.  
+
+<br><br>
+
+Así que si hay algo en lo que yo pueda apoyarte no dudes en decírmelo.  
+A pesar de que a veces nada es sencillo en la vida, estaré para apoyarte emocional, física y espiritualmente.  
+Nunca dejaré que algo, alguien o incluso yo permita que nuestra relación se destruya.  
+
+<br><br>
+
+Muchas felicidades por llegar a tus 26 años.  
+No ha sido fácil, pero como siempre lo has hecho, saldrás adelante y tus esfuerzos serán recompensados. 🎂✨
+</p>
+</div>
+
+<div class="section">
+<img src="foto1.jpg" class="show">
+</div>
+
+<div class="section">
+<img src="foto2.jpg">
+</div>
+
+<div class="section">
+<img src="foto3.jpg">
+</div>
+
+<div class="section">
+<img src="foto4.pnj.jpg" class="couple">
+</div>
+
+<div class="section">
+<h2>Que este nuevo año esté lleno de crecimiento, amor y logros 🌿💛</h2>
+</div>
+
+<div class="stars" id="stars"></div>
+
+<script>
+
+const sections = document.querySelectorAll('.section');
+const images = document.querySelectorAll('img');
+const counter = document.getElementById('counter');
+
+window.addEventListener('scroll',()=>{
+sections.forEach(section=>{
+const position = section.getBoundingClientRect().top;
+if(position < window.innerHeight - 100){
+section.classList.add('visible');
+}
+});
+
+images.forEach(img=>{
+const position = img.getBoundingClientRect().top;
+if(position < window.innerHeight - 100){
+img.classList.add('show');
+}
+});
+});
+
+window.onload = function(){
+const audio = document.getElementById("music");
+audio.currentTime = 35;
+audio.play();
+
+setTimeout(()=>{
+counter.classList.add("show");
+},500);
+}
+
+function createStars(){
+const starContainer = document.getElementById('stars');
+for(let i=0;i<25;i++){
+let star=document.createElement("div");
+star.classList.add("star");
+star.innerHTML="✦";
+star.style.left=Math.random()*100+"%";
+star.style.animationDelay=Math.random()*5+"s";
+starContainer.appendChild(star);
+}
+}
+
+createStars();
+
+</script>
+
+</body>
+</html>
