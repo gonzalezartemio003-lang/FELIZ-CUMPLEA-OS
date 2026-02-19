@@ -16,6 +16,7 @@ text-align:center;
 overflow-x:hidden;
 }
 
+/* SECCIONES */
 .section{
 padding:80px 20px;
 opacity:0;
@@ -28,17 +29,17 @@ opacity:1;
 transform:translateY(0);
 }
 
+/* TITULOS */
 h1{
-font-size:60px;
+font-size:55px;
 color:#ffd700;
-letter-spacing:4px;
-margin-bottom:10px;
+letter-spacing:3px;
 }
 
 h2{
 color:#a8ff60;
 font-weight:300;
-letter-spacing:3px;
+letter-spacing:2px;
 }
 
 p{
@@ -50,10 +51,11 @@ margin-top:30px;
 color:#eaeaea;
 }
 
+/* IMAGENES */
 img{
 width:85%;
 max-width:800px;
-border-radius:12px;
+border-radius:14px;
 margin-top:40px;
 box-shadow:0 0 25px rgba(255,215,0,0.2);
 opacity:0;
@@ -66,6 +68,7 @@ opacity:1;
 transform:scale(1);
 }
 
+/* FOTO USTEDES */
 .couple{
 animation:glow 4s infinite alternate;
 }
@@ -75,6 +78,7 @@ from{box-shadow:0 0 20px rgba(255,215,0,0.2);}
 to{box-shadow:0 0 40px rgba(255,255,0,0.6);}
 }
 
+/* CONTADOR */
 .counter{
 font-size:120px;
 font-weight:bold;
@@ -87,6 +91,7 @@ transition:2s ease;
 opacity:1;
 }
 
+/* ESTRELLAS */
 .stars{
 position:fixed;
 bottom:0;
@@ -113,106 +118,23 @@ animation:twinkle 5s infinite;
 
 <body>
 
-<audio id="music" autoplay loop>
+<!-- MUSICA -->
+<audio id="music" loop>
 <source src="mananitas.mp3" type="audio/mp3">
 </audio>
 
+<!-- CONTADOR -->
 <div class="section visible">
 <div class="counter" id="counter">26</div>
 <h2>Felices Años Daniela ✨</h2>
 </div>
 
+<!-- MENSAJE -->
 <div class="section">
 <h1>Felices 26 Años Daniela mi hoyuelito 💛</h1>
+
 <p>
-Hoy celebramos no solo tu cumpleaños, sino la increíble persona y mujer que eres.  
-Admiro tu fuerza, tu manera de ver la vida.  
-Eres alguien trabajadora, increíblemente hábil e inteligente que sabe cómo resolver las cosas de forma independiente.  
-Tan hermosa no solo físicamente sino espiritualmente, así que no dudes de lo capaz que eres.  
-Podrás y puedes lograr lo que desees, y aunque sea difícil, sé que lo conseguirás.  
-
-<br><br>
-
-Así que si hay algo en lo que yo pueda apoyarte no dudes en decírmelo.  
-A pesar de que a veces nada es sencillo en la vida, estaré para apoyarte emocional, física y espiritualmente.  
-Nunca dejaré que algo, alguien o incluso yo permita que nuestra relación se destruya.  
-
-<br><br>
-
-Muchas felicidades por llegar a tus 26 años.  
-No ha sido fácil, pero como siempre lo has hecho, saldrás adelante y tus esfuerzos serán recompensados. 🎂✨
-</p>
-</div>
-
-<div class="section">
-<img src="foto1.jpg" class="show">
-</div>
-
-<div class="section">
-<img src="foto2.jpg">
-</div>
-
-<div class="section">
-<img src="foto3.jpg">
-</div>
-
-<div class="section">
-<img src="foto4.pnj.jpg" class="couple">
-</div>
-
-<div class="section">
-<h2>Que este nuevo año esté lleno de crecimiento, amor y logros 🌿💛</h2>
-</div>
-
-<div class="stars" id="stars"></div>
-
-<script>
-
-const sections = document.querySelectorAll('.section');
-const images = document.querySelectorAll('img');
-const counter = document.getElementById('counter');
-
-window.addEventListener('scroll',()=>{
-sections.forEach(section=>{
-const position = section.getBoundingClientRect().top;
-if(position < window.innerHeight - 100){
-section.classList.add('visible');
-}
-});
-
-images.forEach(img=>{
-const position = img.getBoundingClientRect().top;
-if(position < window.innerHeight - 100){
-img.classList.add('show');
-}
-});
-});
-
-window.onload = function(){
-const audio = document.getElementById("music");
-audio.currentTime = 35;
-audio.play();
-
-setTimeout(()=>{
-counter.classList.add("show");
-},500);
-}
-
-function createStars(){
-const starContainer = document.getElementById('stars');
-for(let i=0;i<25;i++){
-let star=document.createElement("div");
-star.classList.add("star");
-star.innerHTML="✦";
-star.style.left=Math.random()*100+"%";
-star.style.animationDelay=Math.random()*5+"s";
-starContainer.appendChild(star);
-}
-}
-
-createStars();
-
-</script>
-
-</body>
-</html>
+Hoy celebramos no solo tu cumpleaños, sino la increíble persona y mujer que eres.
+Admiro tu fuerza, tu manera de ver la vida.
+Eres alguien trabajadora, increíblemente hábil e inteligente que sabe cómo resolver las cosas de forma independiente.
+Tan h
